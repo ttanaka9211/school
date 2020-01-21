@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>オブジェクト演習</title>
+</head>
+<body>
+    <h1>オブジェクト演習</h1>
+    <p>1.日時</p>
+    <script>
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = today.getMonth() + 1;
+        var day = today.getDate();
+        var hour = today.getHours();
+        var minute = today.getMinutes();
+        var seconde = today.getSeconds();
+        var miniseconde = today.getMilliseconds();
+
+        document.write ('だだ今の時間は、<h2>'+
+            year + '年' + month + '月' + day + '日'　+
+            '' + hour + '時' + minute + '分' + seconde +
+            '秒' + miniseconde + 'm秒'
+        );
+        
+        document.write('</h2>です。')
+    
+    </script>
+    <p>2.Math</p>
+    <script>
+        var num = 3.1416
+        document.write(Math.ceil(num) + '<br>'); //小数点切り上げ
+        document.write(Math.floor(num) + '<br>'); //小数点切り捨て
+        document.write(Math.round(num)); //小数点四捨五入
+
+        document.write('1~99を無作為で出す <br>');
+        var bingo;
+        bingo = Math.random() * 100;
+        document.write(Math.floor(bingo)); 
+    </script>
+</body>
+</html>

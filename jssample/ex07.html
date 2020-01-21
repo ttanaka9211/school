@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for文の演習</title>
+</head>
+<body>
+    <h1>for文の演習</h1>
+    <p>基本</p>
+        <script>
+            for(var i = 0; i < 5; i++) {
+                document.write((i + 1) + '回目の挨拶：hello world!! <br>');
+            }
+        </script>
+    <p>1から100までの整数の合計、平均を求める</p>
+        <script>
+            var sum = 0;    //合計
+            var avg = 0.0;  //平均
+            
+            for (var i = 1; i <=100; i++) {
+                sum = sum + i;
+                //sum += i;
+            }
+            avg = sum / (i - 1);
+            document.write('平均：' + avg + '<br>');
+            document.write('合計：'+ sum );
+        </script>
+    <p>1900年から3000年までの閏年一覧</p>
+    <script>
+        var year_start = 1900;
+        var year_end = 3000;
+        var count = 0;
+        
+        for (var year = year_start; year <= year_end; year++) {
+            //document.write(year + '<br>');
+            //閏年かを判定する
+            if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                isleapyear = true;
+                count ++;
+            } else {
+                isleapyear = false;
+            }
+        } else {
+            if (year % 4 == 0) {
+                isleapyear = true;
+                count ++;
+            } else {
+                isleapyear = false;
+            }
+        }
+            //閏年を出力
+            var i = 0;
+            if (isleapyear == true) {
+                //document.write(year + '<br>');
+            }
+        }
+            document.write(count + '回');
+    </script>
+    <p>練習</p>
+    <script>
+        var sum = 0;
+        var avg = 0.0;
+    for(var i = 0; i>=100; i++) {
+        if(i%2===0) {
+            sum += i;
+        }
+        avg = sum / (i-1)
+        document.write('合計：'　+ sum);
+        document.write('平均：' + avg);
+    }
+    </script>
+    <p>4.スコープの注意点</p>
+    <script>
+        var str = 'グローバル変数';
+        function func1() {
+            var str = 'func1';
+            document.write(str + '<br>');
+        }
+        function func2() {
+            var str = 'func2';
+            document.write(str + '<br>');
+        }
+        func1();
+        func2();
+        document.write(str + '<br>')
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ブラウザオブジェクト演習</title>
+
+    <script>
+        function check(msg) {
+            var result = confirm(msg);
+            if (result) {
+                alert ('キャンセルしました。');
+            } else {
+                alert ('キャンセルボタンをクリックしました。');
+            }
+        }
+        
+        var count=0;    //カウントアップ用変数
+        var timer = setInterval(output,1000);   //タイマーを作成        
+        
+        function output (){
+            count++;
+            console.log(count);
+            if(count>=10) {
+                clearInterval(timer);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>ブラウザオブジェクト演習</h1>
+    <p>1. cofirm</p>
+        <button onclick = "check('登録します。よろしいでしょうか？');"> クリック</button>
+    
+    <p>2.openとclose</p>
+    <button onclick="open('bmi.html',null,'width=400','height=300');">BMIアプリを開く</button>
+
+    <p>4.location</p>
+    <button onclick="location.href = 'leapyear.html';">閏年判定プログラム</button>
+
+</body>
+</html>

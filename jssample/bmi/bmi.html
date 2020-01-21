@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>KOMA-NATSU Web</title>
+<meta name="keywords" content="にゃんこ,ネコ,ねこ,猫,ねこ紹介,ねこ自慢">
+<meta name="description" content="我が家のアイドル、にゃんこ達を紹介します！可愛い猫写真を沢山掲載しています。">
+<link href="style.css" rel="stylesheet" media="all">
+<link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <h1>BMI計算・評価アプリ</h1>
+</header>
+
+<main id="contents">
+<form id="entryForm" action="#" method="post">
+  <p><strong><span class="require">*</span>は必須項目です。</strong></p>
+  
+  <table class="entryTable">
+    <tr>
+      <th>身長 *</th>
+      <td><input type="text" id="height" required autofocus>&nbsp;&nbsp;&nbsp;cm</td>
+    </tr>
+    <tr>
+      <th>体重 *</th>
+      <td><input type="text" id="weight"></td>
+    </tr>
+    <tr>
+      <th>性別 *</th>
+      <td>
+        <input type="radio" name="sex" id="male" value="男の子" checked required>
+        <label for="male">男姓</label>
+        <input type="radio" name="sex" id="female" value="女の子" required>
+        <label for="female">女性</label>
+      </td>
+    </tr>
+    <tr>
+      <th>好物</th>
+      <td>
+        <input type="checkbox" name="favorite" id="favo1" value="お魚">
+        <label for="favo1">お魚</label>
+        <input type="checkbox" name="favorite" id="favo2" value="お肉">
+        <label for="favo2">お肉</label>
+        <input type="checkbox" name="favorite" id="favo3" value="カリカリ">
+        <label for="favo3">カリカリ</label>
+        <input type="checkbox" name="favorite" id="favo4" value="猫缶">
+        <label for="favo4">猫缶</label>
+        <input type="checkbox" name="favorite" id="favo5" value="ちゅーる">
+        <label for="favo5">ちゅーる</label>
+        <input type="checkbox" name="favorite" id="favo6" value="その他">
+        <label for="favo6">その他</label>
+      </td>
+    </tr>
+    <tr>
+      <th>写真 *</th>
+      <td><input type="file" name="photo" required></td>
+    </tr>
+  </table>
+  <table class="entryTable">
+    <caption>飼い主さんの情報</caption>
+    <tr>
+      <th>お名前 *</th>
+      <td>
+        <input type="text" name="name" placeholder="黒猫小町" required>
+        <small>※ハンドルネーム可</small>
+      </td>
+    </tr>
+    <tr>
+      <th>メールアドレス *</th>
+      <td>
+        <input type="email" name="email" placeholder="sample@gmail.com" required>
+        <small>※半角で入力してください</small>
+      </td>
+    </tr>
+    <tr>
+      <th>コメント</th>
+      <td><textarea name="comment" rows="4" cols="40"></textarea></td>
+    </tr>
+  </table>
+  <div class="entryBtns">
+    <input type="reset" value="クリア">
+    <input type="button" onclick =  value="投稿">
+  </div>
+</form>
+</main>
+
+
+<footer>
+  <p><small>Copyright © KOMA-NATSU Web All Rights Reserved.</small></p>
+</footer>
+<script>
+  funcdtion bmicalc() {          
+        
+        var height = 175;  //身長cm
+        var weigth = 90;    //体重kg
+        var bmi_value = 0;  //bmi値
+        var bmi_rank = 1;   //bimランク
+        var idealweight = height * height * 22 / 10000 ;    //適正体重
+        var comment = '';   //コメント
+
+       var str = document.getElementById(height).value;
+       height = paresFloat(str);
+       var str = 
+
+
+
+    </script>
+    <button onclick="Window.close();">BMIアプリを閉じる</button>
+</body>
+</html>
+
+
+  }
+</script>
+</body>
+</html>
+
+
+

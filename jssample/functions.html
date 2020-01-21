@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>関数の演習</title>
+    <!-- 自作関数　-->
+    <script>
+        function hello() {
+            document.write('hello world !!')
+        }
+        function output(msg) {
+            document.write(msg + '<br>');
+        }
+        //長方形の面積を計算する関数
+        function tyouhoukei(width,height) {
+            let area = width*height;
+            return area;
+        }
+        //円形面積を計算する関数
+        function calcCircle(radius) {
+            return radius * radius * 3.14
+            
+        }
+        //閏年判定
+        function isleapyear(year) {
+            var isleapyear = false;
+            if (year % 400 == 0) {
+                isleapyear = true
+            } else {
+                if ( year % 4 == 0 && year % 100 !=0) {
+                    isleapyear = true;
+                } else {
+                    isleapyear = false
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>関数の演習</h1>
+    <p>1.引数無し、戻り値無し</p>
+    <script>
+        for (let i = 0; i<5; i++){   
+        //数を呼び出す
+        hello();
+        }
+    </script>
+
+    <p>2.引数あり,戻り値無し</p>
+    <script>
+        output('こんにちは、これを出力お願いします');
+    </script>
+
+    <p>3.引数有り、戻り値有り</p>
+    <script>
+        //長方形の面積を計算する例
+        var area = tyouhoukei(100,200);
+        output('100✖️200長方形の面積は' + area + 'です。');
+        
+        //円形の面積を計算する例
+        var radius = 100;
+        area = calcCircle(radius);
+        output('半径'　+ radius + 'の円形の面積は' + area + 'です。');
+
+        var year = 3000;
+        var hantei = leapyear(year);
+        if (hantei == true) {
+            output(year + 'は閏年です。');
+        } else {
+            output(year + 'は平年です');
+        }
+    </script>
+
+    
+</body>
+</html>

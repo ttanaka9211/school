@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bmiと適正体重</title>
+    <style>
+        table {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>bmiと適正体重</h1>
+    <script>
+        var height = 175;  //身長cm
+        var weigth = 90;    //体重kg
+        var bmi_value = 0;  //bmi値
+        var bmi_rank = 1;   //bimランク
+        var idealweight = height * height * 22 / 10000 ;    //適正体重
+        var comment = '';   //コメント
+
+        bmi_value = 10000 * weigth / (height * height);
+        if (bmi_value < 18.5) {
+            comment = '痩せ型';
+        } else if (bmi_value < 25) {
+            comment = '普通体重';
+        } else if (bmi_value < 30) {
+            comment = '肥満（1度）';
+        } else if (bmi_value < 35) {
+            comment = '肥満度（2度）';
+        } else if (bmi_value < 40) {
+            comment = '肥満度（3度）';
+        } else {
+            comment = '肥満度（4度）';
+        }
+        
+
+        document.write('身長は' + height + 'cmです。' + '<br>\n');
+        document.write('体重は' + weigth + 'kgです。' + '<br>\n');
+        document.write("BMIは" + bmi_value.toFixed(1) + "です。" + "<br>\n"); 
+        document.write("評価は" + comment + "です。" + "<br>\n");
+        document.write("適正体重は" + idealweight.toFixed(1) + "kgです。" + '<br>\n');
+        
+        document.write('<table>');
+
+        document.write('<tr>');
+        document.write('<th>身長</th><td>' + height + 'cm </td>');
+        document.write('</tr>');
+
+        document.write('<tr>');
+        document.write('<th>体重</th><td>' + weigth + 'kg</td>');
+        document.write('</tr>');
+
+        document.write('<tr>');
+        document.write('<th>BMI値</th><td>' + bmi_value.toFixed(1) + '</td>');
+        document.write('</tr>');
+
+        document.write('<tr>');
+        document.write('<th>評価</th><td>' + comment + '</td>');
+        document.write('</tr>');
+
+        document.write('<tr>');
+        document.write('<th>適正体重</th><td>' + idealweight.toFixed(1) + 'kg</td>');
+        document.write('</tr>');
+
+        document.write('</table>'); 
+
+
+
+
+    </script>
+    <button onclick="Window.close();">BMIアプリを閉じる</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>閏年判定プログラム</title>
+</head>
+<body>
+    <h1>閏年判定プログラム</h1>
+    <script>
+        var year = 2010;
+        if (year % 4 === 0 && (!(year % 100 === 0 && year % 400 !==0))) {
+            console.log('閏年です。');
+            document.write(year + "年は閏年です。");
+        }　else {
+            console.log('閏年ではありません。');
+            document.write(year + "年は閏年ではありません。");
+        }
+    </script>
+    
+</body>
+</html>
