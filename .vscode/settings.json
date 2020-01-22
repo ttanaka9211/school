@@ -1,5 +1,5 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vs-minimal",
     "workbench.startupEditor": "newUntitledFile",
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.CustomBrowser": "chrome",
@@ -17,7 +17,7 @@
     },
     "sync.gist": "f9b18f763fdae9d936a1ecade0655e6b",
     "git.enableSmartCommit": true,
-    "vsonline.planFilter": "/subscriptions/2429a07f-a82d-4048-a52b-f9e3f6690047/resourceGroups/vso-rg-cd5a82a/providers/Microsoft.VSOnline/plans/vso-plan-southeastasia",
+    "vsonline.planFilter": "/subscriptions/2431a07f-a82d-4048-a52b-f9e3f6690047/resourceGroups/vso-rg-cd5a82a/providers/Microsoft.VSOnline/plans/vso-plan-southeastasia",
     "emmet.variables": {
         "lang": "jp",
     },
