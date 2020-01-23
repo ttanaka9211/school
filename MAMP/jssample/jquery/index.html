@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery演習</title>
+
+    <!-- ローカルのjQueryライブりを読み込む -->
+    <script src="./js/vender/jquery-3.4.1.min.js"></script>
+
+    <!-- GoogleサーバーからjQueryライブりを読み込む -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+    <script>
+        q
+        function () {
+            $("p#ex01").css("font-size", "30px");
+
+            $("p#ex01").css("color", "#ff0000");
+
+            // $("p#ex01").css("font-size", "30px").css("color", "#ff0000");
+
+            $("div#parent p").css("font-size", "20px");
+
+            $("div#parent > p").css("color", "#00ff00");
+
+            $("#btncolor").on("click", function () {
+                $("p#ex01").css("color", "#0000ff");
+            });
+
+            $("#btncolor2").on("click", function () {
+                $("p#ex01").css("color", "#00ff00");
+            });
+
+            $("#btnhtml").on("click", function () {
+                $("p#ex01").html("1.フォントサイズと色を変更する");
+            });
+
+            $("p#ex01").on("mouseenter", function () {
+                $("p#ex01").css("color", "#00ffff");
+                $("p#ex01").html("色がかわりました");
+            });
+
+            $("p#ex01").on("mouseleave", function () {
+                $("p#ex01").css("color", "#ff0000");
+                $("p#ex01").html("色が戻りました");
+            });
+
+            $("#fruits > li:first").css("background-color", "red");
+            $("#fruits > li:last").css("background-color", "green");
+
+            $("#fruits > li").css("background-color", "#cccccc").
+                filter(":even").css("color", "#ffff00");
+
+            $("#change").on("click", function () {
+                $("#msg2").val($("#msg1").val());
+            });
+
+            $("#imgchange").on("click", function () {
+                $("img").attr("src", "./images/konatsu.jpg")
+            });
+        }
+        );
+    </script>
+    <style>
+        #ex01 {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery演習</h1>
+    <p id="ex01">1.フォントサイズと色を変更する</p id="ex01" >
+    <div id="parent">
+        <p>段落１段落１段落１段落１段落１段落１段落１段落１段落１段落１</p>
+    <div>
+        <p>段落２段落２段落２段落２段落２段落２段落２段落２段落２</p>
+    </div>
+
+    <button id="btncolor">文字色を青に変えます</button>
+    <button id="btncolor2">文字色を緑に変えます</button>
+    <button id="btnhtml">段落の内容が戻ります</button>
+    </div>
+
+    <p id="ex02">2.要素を抽出する</p>
+    <ul id="fruits">
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>いちご</li>
+        <li>ぶどう</li>
+        <li>いよかん</li>
+    </ul>
+
+    <p id="ex03">３.valメソッド</p>
+    <input type="text" id="msg1" value="おはよう">
+    <input type="text" id="msg2" value="こんにちは">
+    <input type="button" name="change" id="change" value="内容をコピーする">
+
+    <p id="ex03">4.属性値を操作する</p>
+    <img src="./images/komachi.jpg" alt="aaaaaa" width="400">
+    <input type="button" id="imgchange" value="画面を変更する">
+
+</body>
+</html>
