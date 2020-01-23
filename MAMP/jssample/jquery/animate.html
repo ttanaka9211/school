@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery animat</title>
+    <meta http-equiv="X-UA-Compatible" content="tentie=edge">
+    <script src="./vender/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(
+            function() {
+                $("large").on("click",function(){
+                    $("#photo").animate(
+                    {"width":"50%","height":"50%"},
+                    2000,
+                    "Iinear"
+                    ).animate({
+                        "width":"30%","height":"30%"
+                        },
+                    2000,
+                    "Iinear"
+                    );
+                });
+            });
+    
+    </script>
+</head>
+<body>
+    <h1>jQuery animate</h1>
+    <div><button class="large">拡大</button></div>
+
+</body>
+</html>

@@ -53,19 +53,12 @@
             $("#fruits > li").css("background-color", "#cccccc").
                 filter(":even").css("color", "#ffff00");
 
-            $("#change").on("click", function () {
-                $("#msg2").val($("#msg1").val());
-            });
-
             $("#imgchange").on("click", function () {
                 $("img").attr("src", "./images/konatsu.jpg")
-            });
-            $("#imgreplace").on("click",function() {
-                $("p#imgshow").replaceWith('<img src="./images/ komachi.jpg" alt= "aaaaaa" width="400">');
-            })
-            
-        }
-        );
+            }
+            $("sulideUp").on("click", function () {
+                $("img").attr("src", "./images/konatsu.jpg")
+   
     </script>
     <style>
         #block{
@@ -122,6 +115,7 @@
         <button id="fedein">フェードイン</button>
         <button id="fedeout">フェードアウト</button>
         <button class="fedeto">fedeto</button>
+        <button id="slideUp">slideUp</button>
     </div>
     <div id="block"></div>
 </body>
