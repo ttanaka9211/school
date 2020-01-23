@@ -60,10 +60,20 @@
             $("#imgchange").on("click", function () {
                 $("img").attr("src", "./images/konatsu.jpg")
             });
+            $("#imgreplace").on("click",function() {
+                $("p#imgshow").replaceWith('<img src="./images/ komachi.jpg" alt= "aaaaaa" width="400">');
+            })
+            
         }
         );
     </script>
     <style>
+        #block{
+            width: 20px;
+            height: 100px;
+            border: 1px #ff0000 solid;
+            background-color:coral;
+        }
         #ex01 {
             color: #00ff00;
         }
@@ -100,6 +110,19 @@
     <p id="ex03">4.属性値を操作する</p>
     <img src="./images/komachi.jpg" alt="aaaaaa" width="400">
     <input type="button" id="imgchange" value="画面を変更する">
-
+    <div>
+        <p class="imgshow">ここに画像を表示</p>
+        <input type="button"  value="画面で置き換える">
+    </div>
+    <div>
+        <button id="open">展開する</button>
+        <button id="close">隠す</button>
+        <button class="toggl">表示・非表示切り替える</button>
+        <br>
+        <button id="fedein">フェードイン</button>
+        <button id="fedeout">フェードアウト</button>
+        <button class="fedeto">fedeto</button>
+    </div>
+    <div id="block"></div>
 </body>
 </html>
